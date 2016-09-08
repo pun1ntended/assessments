@@ -2,3 +2,19 @@
 
 <!-- Write out all of the appropriate html for a user who goes to the form to create a new user -->
 <!-- Imagine that a user both a name and a hometown -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create a New User</title>
+</head>
+<body>
+  <%= form_for @user do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :hometown %>
+    <%= f.text_field :hometown %>
+    <p> <%= f.submit %></p>
+  <% end %>
+</body>
+</html>

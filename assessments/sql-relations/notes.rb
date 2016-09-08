@@ -19,3 +19,14 @@ id | name |
 # - Do the belongs_to first
 # - Then do the has_many
 # - If there is a many to many, we need a third table
+
+
+
+Customers have many reviews
+Customers have many restaurants through reviews
+
+Restaurants belong to an owner
+A restaurant has many reviews
+A restaurant has many customers through reviews
+
+

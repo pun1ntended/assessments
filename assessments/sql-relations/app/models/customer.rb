@@ -26,6 +26,6 @@ class Customer
 end
 
 
-customer = Customer.all.first
-# id = 1
-customer.restaurants
+# customer = Customer.all.first
+# # id = 1
+# customer.restaurants
