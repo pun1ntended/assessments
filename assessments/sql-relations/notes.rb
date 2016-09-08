@@ -20,13 +20,26 @@ id | name |
 # - Then do the has_many
 # - If there is a many to many, we need a third table
 
+Tables:
+Customers
+reviews
+
+Restaurants
+owners
 
 
-Customers have many reviews
-Customers have many restaurants through reviews
 
-Restaurants belong to an owner
-A restaurant has many reviews
-A restaurant has many customers through reviews
+Customer has_many reviews
+Customer has_many restaurants through reviews
+
+Restaurant belongs_to an owner
+A restaurant has_many reviews
+A restaurant has_many customers through reviews
+
+A Review belongs_to a customer and belongs_to a restaurant
+
+An owner has_many restaurants
+an owner has_many customers through restaurants
+
 
 
