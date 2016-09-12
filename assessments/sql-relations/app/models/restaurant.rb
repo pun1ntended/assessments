@@ -1,4 +1,7 @@
 class Restaurant
+  has_many :customers
+  has_many :reviews, through: :customers
+  belongs_to :owner
   include Databaseable::InstanceMethods
   extend Databaseable::ClassMethods
   

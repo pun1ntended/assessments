@@ -1,6 +1,8 @@
 class Customer
   include Databaseable::InstanceMethods
   extend Databaseable::ClassMethods
+  has_many :reviews
+  has_many :restaurants, through: :reviews
 
   ATTRIBUTES = {
     id: "INTEGER PRIMARY KEY",

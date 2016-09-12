@@ -1,4 +1,6 @@
 class Review 
+  belongs_to :customer
+  belongs_to :restaurant
   include Databaseable::InstanceMethods
   extend Databaseable::ClassMethods
 
