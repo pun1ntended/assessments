@@ -1,4 +1,5 @@
 class Review
+  attr_accessor :customer, :restaurant
   @@reviews = []
   def initialize(restaurant, review, customer = nil)
     @restaurant = restaurant
@@ -6,11 +7,5 @@ class Review
     @@reviews << self
     @customer = customer
   end  
-  def customer
-    @customer
-  end
-  def restaurant
-    @restaurant
-  end
 end
 

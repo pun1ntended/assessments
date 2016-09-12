@@ -1,4 +1,5 @@
 class Restaurant
+  attr_accessor :customers, :reviews, :name
   @@restaurants = []
   def initialize(name)
     @name = name
@@ -6,19 +7,17 @@ class Restaurant
     @reviews = []
     @customers = []
   end
-  def customers
-    @customers
-  end
-  def reviews
-    @reviews
-  end
+
   def self.all
     @@restaurants
   end
-  def self.find_by_name(name)
-    all.find do |restaurant|
-      restaurant.name = name
+   def self.find_or_create_by_name(name)
+      restaurant = all.find { |restaurant| restaurant.name == name}
+      if restaurant
+        restaurant
+      else
+        Restaurant.new(name)
+      end
     end
-  end
 
 end
